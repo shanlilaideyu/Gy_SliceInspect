@@ -433,7 +433,13 @@ namespace SZ_BydKeyboard
                 Common.ProC.GetStatus();
                 Common.ProC.Control_T();
                 #region 信号处理
-                if (Common.ProC.ExCard.InputList[ProControl.ExInput.启动.GetHashCode()] && !b_Start) //收到启动上升沿信号 
+                if(Common.ProC.ExCard.InputList[ProControl.ExInput.治具1对射感应.GetHashCode()] || 
+                    Common.ProC.ExCard.InputList[ProControl.ExInput.治具2对射感应.GetHashCode()])
+                {
+                    Common.ProC.ExCard.WriteOutput((ushort)ProControl.ExOutput.机台报警.GetHashCode(), 0);
+                    BTN_Pause_Click(this,null);
+                }
+                else if (Common.ProC.ExCard.InputList[ProControl.ExInput.启动.GetHashCode()] && !b_Start) //收到启动上升沿信号 
                 {
                     Common.ProC.OpenGreenLight();
                     Common.ProC.nStation1 = 0;

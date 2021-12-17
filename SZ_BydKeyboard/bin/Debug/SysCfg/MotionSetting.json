@@ -3,7 +3,7 @@
 "PositionList":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
 "DelayList":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 "MpgInput":[false,false,true,false,false,false,false,true],
-"Card1":{"cfgPath":"D:\\【4】程序源码\\2.比亚迪键盘AOI\\SZ_BydKeyboard1021\\SZ_BydKeyboard\\bin\\Debug\\SysCfg\\Card.cfg",
+"Card1":{"cfgPath":"E:\\Project\\vision\\BYD\\SZ_BydKeyboard1215\\SZ_BydKeyboard\\bin\\Debug\\SysCfg\\Card.cfg",
 "m_CardNo":0,
 "AxisName":["X轴",
 "Y1轴",
