@@ -176,6 +176,7 @@ namespace SZ_BydKeyboard
                 if (str.Length > 1)
                 {
                     Common.str_DataCode2 = str;
+                    Common.modelMgr.OnReceiveBarcode(str);
                     Common.ShowMsgEvent($"Tips:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}--工位2二维码为:[{ Common.str_DataCode2}]--");
                 }
             }
@@ -189,6 +190,7 @@ namespace SZ_BydKeyboard
                 if (str.Length > 1)
                 {
                     Common.str_DataCode1 = str;
+                    Common.modelMgr.OnReceiveBarcode(str);
                     Common.ShowMsgEvent($"Tips:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}--工位1二维码为:[{ Common.str_DataCode1}]--");
                 }
             }
@@ -316,7 +318,9 @@ namespace SZ_BydKeyboard
             InitMainformLayout();
             Common.frmMain = this;
 
+            Common.modelMgr.LoadConfig();
             Common.ShowProductType(Common.str_ProductName);
+            Common.modelMgr.SetLastModel(Common.str_ProductName);
             Thread.Sleep(500);
             InitCamera();
             LoadParam();
@@ -331,6 +335,12 @@ namespace SZ_BydKeyboard
             metroShell1.SelectedTab = metroTabItem1;
             Common.frmShow.ShowInitImage();
             Common.frmDataSum.UpdateSum(Common.ProductSum, Common.ProductNg);
+            Common.modelMgr.BarcodeChanged += ModelMgr_BarcodeChanged;
+        }
+
+        private void ModelMgr_BarcodeChanged(object sender, string model)
+        {
+            Common.ShowProductType(model);
         }
 
         private void Btn_SaveLayout_Click(object sender, EventArgs e)
@@ -603,6 +613,12 @@ namespace SZ_BydKeyboard
         private void buttonX2_Click_1(object sender, EventArgs e)
         {
             Common.frmShow.LocalImageTest();
+        }
+
+        private void btnSN2Model_Click(object sender, EventArgs e)
+        {
+            string sn = this.tbSN.Text;
+            Console.WriteLine(Common.modelMgr.SN2Model(sn));
         }
 
         private void buttonX5_Click(object sender, EventArgs e)

@@ -80,6 +80,9 @@ namespace SZ_BydKeyboard
         public static string RunMode = "Once";
 
         public static bool RunOnline = true;
+       public static bool RunOffline = false;
+
+        public static ModelManager modelMgr = new ModelManager();
 
         public static string[] StarFais = new string[]
         {

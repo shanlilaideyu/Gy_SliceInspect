@@ -72,6 +72,10 @@ namespace LeoCam
         {
             try
             {
+                if(this.Status != CamStatus.Open)
+                {
+                    return;
+                }
                 this.Status = CamStatus.Close;
                 //PvBuffer lBuffer = null;
                 PvResult lOperationResult = new PvResult(PvResultCode.OK);
