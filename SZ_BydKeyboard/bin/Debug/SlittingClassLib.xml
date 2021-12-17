@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SlittingClassLib</name>
+    </assembly>
+    <members>
+        <member name="M:SlittingClassLib.SlittingClass.SaveData(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            数据上传方法
+            </summary>
+            <param name="strBMDM">部门代码(1,2,3,4,5)</param>
+            <param name="strPolarity">极性(正极,负极)</param>
+            <param name="strTestType">检验类型(首检,尾检,巡检)</param>
+            <param name="strMachineNo">设备编号</param>
+            <param name="strProjCode">产品型号</param>
+            <param name="strBatch">生产批次</param>
+            <param name="strVolumenum">卷号</param>
+            <param name="strBarcode">条码</param>
+            <param name="SerpentineSpec">蛇形规格</param>
+            <param name="SerpentineData">蛇形数据</param>
+            <param name="WaveSpec">波浪规格</param>
+            <param name="WaveData">波浪数据</param>
+            <param name="strOperator">操作员</param>
+            <param name="strRemarks">备注信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SlittingClassLib.SlittingClass.GetInfoByBarcode(System.String)">
+            <summary>
+            根据条码获取信息
+            </summary>
+            <param name="strBarcode">条码</param>
+            <returns>型号,批次,卷号（以逗号分隔）</returns>
+        </member>
+        <member name="M:SlittingClassLib.SlittingClass.MachineInfo(System.String)">
+            <summary>
+            设备开机历史（开关机都要写入）
+            </summary>
+            <param name="strData">传入字符串以逗号分隔  "开机标志,设备编号,员工工号" （顺序不能乱）	例如：0,JQ07-1040-03,50259开机标志:0代表开机    1代表关机</param>
+            <returns>0，录入成功  1，录入失败</returns>
+        </member>
+        <member name="M:SlittingClassLib.SlittingClass.CardCheck(System.String,System.String)">
+            <summary>
+            IC卡开机验证
+            </summary>
+            <param name="strMachineNo">设备编号</param>
+            <param name="strCardID">IC卡卡号</param>
+            <returns>0,Success,员工工号,刷卡时间 || 1,错误信息,员工工号 </returns>
+        </member>
+        <member name="T:SlittingClassLib.SQL">
+            <summary>
+            连接SQL Server数据库操作
+            </summary>
+        </member>
+        <member name="F:SlittingClassLib.SQL.db">
+            <summary>
+            连接对象
+            </summary>
+        </member>
+        <member name="M:SlittingClassLib.SQL.SQLDML(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            执行DML
+            </summary>
+            <param name="sql"></param>
+            <param name="_conn"></param>
+            <returns>-1000执行出现异常</returns>
+        </member>
+        <member name="M:SlittingClassLib.SQL.SQLTransf(System.Collections.Generic.List{System.String},System.Data.SqlClient.SqlConnection)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="sqllist"></param>
+            <param name="_conn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SlittingClassLib.SQL.PingIpOrName(System.String)">
+            <summary>
+            判断网络是否接通
+            </summary>
+            <param name="IpOrName">ip/name</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

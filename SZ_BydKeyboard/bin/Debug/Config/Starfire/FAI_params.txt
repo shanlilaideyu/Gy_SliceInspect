@@ -1,0 +1,9 @@
+Power_switch
+Switch_screw_1
+Power_flex_Connector_buckle         #180	
+E75_flex_Connector_buckle
+MLB_flex_Connector_buckle          #90
+Main_board_screw_3	
+Main_board_screw_2
+Main_board_screw_1
+Antenna_shrapnel

@@ -1,0 +1,15 @@
+Power_switch
+Switch_screw_1
+Power_flex_Connector_buckle         #180	
+Mesa_flex_Connector_buckle	       
+Mesa_jumper_flex_cosmetic_1
+Mesa_jumper_flex_cosmetic_2
+Mesa_jumper_flex_cosmetic_3
+Mesa_jumper_flex_cosmetic_4        
+MLB_jumper_flex_B2B
+E75_flex_Connector_buckle
+MLB_flex_Connector_buckle          #90
+Main_board_screw_3	
+Main_board_screw_2
+Main_board_screw_1
+Antenna_shrapnel

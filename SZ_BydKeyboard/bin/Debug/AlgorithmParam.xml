@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<opencv_storage>
+
+	<CalibrateThreshold>-60</CalibrateThreshold>
+	<CalibrateOpenSize>15</CalibrateOpenSize>
+	<CalibrateAreaUp>2</CalibrateAreaUp>
+	<CalibrateAreaDown>10</CalibrateAreaDown>
+	<CalibrateHeightUp>3000</CalibrateHeightUp>
+	<CalibrateHeightDown>300</CalibrateHeightDown>	
+	<CalibrateRectX>200</CalibrateRectX>
+	<CalibrateRectY>200</CalibrateRectY>
+	<CalibrateGaussianSize>11</CalibrateGaussianSize>
+
+	<WaveThreshold>-60</WaveThreshold>
+	<WaveOpenSize>15</WaveOpenSize>
+	<WaveAreaUp>2</WaveAreaUp>
+	<WaveAreaDown>10</WaveAreaDown>
+	<WaveWidthDown>3000</WaveWidthDown>
+	<WaveWidthUp>25000</WaveWidthUp>
+	<WaveHeightUp>3000</WaveHeightUp>
+	<WaveHeightDown>300</WaveHeightDown>
+	<WaveGaussianSize>11</WaveGaussianSize>
+	<WaveCannyThreshold>30</WaveCannyThreshold>
+	<WaveReduceDist>150</WaveReduceDist>
+	<WaveDeathAreaWidth>150</WaveDeathAreaWidth>
+	<WaveRenderMinValue>-58</WaveRenderMinValue>
+	
+	<Ksize>100</Ksize>
+	<SearchStep>300</SearchStep>
+	<CrestSmooth>10</CrestSmooth>
+	<CrestThreshold>1.5</CrestThreshold>	
+	<CrestCorrectValue>1.75</CrestCorrectValue>
+	<TapeThickness>0.5</TapeThickness>
+	<AltitudeTolerance>1.0</AltitudeTolerance>
+	
+	<GaugeThreshold>-55</GaugeThreshold>
+	<GaugeOpenSize>5</GaugeOpenSize>
+	<GaugeAreaUp>500000</GaugeAreaUp>
+	<GaugeAreaDown>100000</GaugeAreaDown>
+	<GaugeGaussianSize>5</GaugeGaussianSize>
+	<GaugeCorrectValue>1.55</GaugeCorrectValue>
+	
+	<GaugeCorrectValue2>0.0</GaugeCorrectValue2>
+	<GaugeCorrectValue3>0.0</GaugeCorrectValue3>
+	<GaugeCorrectValue4>0.0</GaugeCorrectValue4>
+	<GaugeCorrectValue5>0.0</GaugeCorrectValue5>
+	
+</opencv_storage>

@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Forms.DataVisualization.MSChartExtension</name>
+    </assembly>
+    <members>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.AboutDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.AboutDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.AboutDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.ChartCursor">
+            <summary>
+            Chart Cursor Position 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.CursorIndex">
+            <summary>
+            Return 1 for Cursor1 and 2 for Cursor2
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.DataIndex">
+            <summary>
+            Data point index, -1 if invalid or not found.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.X">
+            <summary>
+            X Value based on primary Axis
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.Y">
+            <summary>
+            Y Value based on primary Axis
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.XFormattedString">
+            <summary>
+            Return X Value as string based on <see cref="P:System.Windows.Forms.DataVisualization.Charting.Series.XValueType"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.YFormattedString">
+            <summary>
+            Return Y Value as string based on <see cref="P:System.Windows.Forms.DataVisualization.Charting.Series.YValueType"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.ChartArea">
+            <summary>
+            ChartArea where the cursor is located.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ChartCursor.Clone">
+            <summary>
+            Clone object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartCursor.SelectedChartSeries">
+            <summary>
+            Selected Chart Series
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.ChartData">
+            <summary>
+            Data Storage class for <see cref="T:System.Windows.Forms.DataVisualization.Charting.MSChartExtension"/>
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ChartData.Backup">
+            <summary>
+            Backtup properties for all Chart Area
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ChartData.Restore">
+            <summary>
+            Restore properties for all Chart Area
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.ChartOption">
+            <summary>
+            Configuration options for <see cref="T:System.Windows.Forms.DataVisualization.Charting.MSChartExtension"/> 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.ContextMenuAllowToHideSeries">
+            <summary>
+            Enable / Disable controls in ContextMenu to show / hide series
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.XAxisPrecision">
+            <summary>
+            Round value on XAxis to number of decimal place
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.YAxisPrecision">
+            <summary>
+            Round value on YAxis to number of decimal place
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor1Color">
+            <summary>
+            Cursor 1 Color, default is <see cref="P:System.Drawing.Color.Red"/> 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor2Color">
+            <summary>
+            Cursor 2 Color, default is <see cref="P:System.Drawing.Color.Green"/> 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor1DashStyle">
+            <summary>
+            Cursor 1 Dash Style, default is <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash"/> 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor2DashStyle">
+            <summary>
+            Cursor 2 Dash Style, default is <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash"/> 
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor1LineWidth">
+            <summary>
+            Cursor 1 Line Width, default = 1
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Cursor2LineWidth">
+            <summary>
+            Cursor 2 Line Width, default = 1
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.SnapCursorToData">
+            <summary>
+            Enable / Disable snap cursor to nearest data points.
+            This feature is enabled by default.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormat">
+            <summary>
+            Define string format of cursor value. Default is "F4", 4 digits fixed decimal.
+            <see cref="M:System.Double.ToString(System.String)"/>
+            Properties split into X1, X2, Y1, Y2 from Version 3.2.0 onwards. Writting to this properties update all 4 properties listed below.
+            Read from this properties return value from <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY1"/>
+            For cursor moved callback, <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatX1"/> and <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY1"/> will be use to format label string.
+            <para><see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatX1"/></para>
+            <para><see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatX2"/></para>
+            <para><see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY1"/></para>
+            <para><see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY2"/></para>
+            </summary>
+            <remarks>More details regarding string format at https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings </remarks>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatX1">
+            <summary>
+            Define string format for cursor value which use X primary axis.
+            </summary>
+            <remarks>More details regarding string format at https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings </remarks>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatX2">
+            <summary>
+            Define string format for cursor value which use X secondary axis.
+            </summary>
+            <remarks>More details regarding string format at https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings </remarks>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY1">
+            <summary>
+            Define string format for cursor value which use Y primary axis.
+            </summary>
+            <remarks>More details regarding string format at https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings </remarks>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelStringFormatY2">
+            <summary>
+            Define string format for cursor value which use Y secondary axis.
+            </summary>
+            <remarks>More details regarding string format at https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings </remarks>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPrefixX1">
+            <summary>
+            Assign prefix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPrefixX2">
+            <summary>
+            Assign prefix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPrefixY1">
+            <summary>
+            Assign prefix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPrefixY2">
+            <summary>
+            Assign prefix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPostfixX1">
+            <summary>
+            Assign postfix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPostfixX2">
+            <summary>
+            Assign postfix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPostfixY1">
+            <summary>
+            Assign postfix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.CursorLabelPostfixY2">
+            <summary>
+            Assign postfix on label string, default is empty
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.ShowCursorValue">
+            <summary>
+            Display cursor value on chart
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.Theme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.BufferedMode">
+            <summary>
+            Virtual Display Mode
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.DisplayDataSize">
+            <summary>
+            Number of data to display in <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.BufferedMode"/>
+            Minimum value is 10. Default Value is 500
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.ConfigurationDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ConfigurationDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ConfigurationDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.FuturisticTheme">
+            <summary>
+            Dark Theme
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.FuturisticTheme.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.DarkTheme">
+            <summary>
+            Dark Theme
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.DarkTheme.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.CursorPositionChanged">
+            <summary>
+            Chart callback function when cursor position changed.
+            </summary>
+            <param name="sender">Chart object</param>
+            <param name="cursor">Chart cursor</param>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.ZoomChanged">
+            <summary>
+            Form of the callback when the user has zoomed the chart.
+            </summary>
+            <param name="sender">Chart Object</param>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState">
+            <summary>
+            MSChart Control Extension's States
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.Unknown">
+            <summary>
+            Undefined
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.Select">
+            <summary>
+            Point Select Mode
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.Select2">
+            <summary>
+            Point Select Mode - Second Cursor
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.Zoom">
+            <summary>
+            Zoom
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.ZoomX">
+            <summary>
+            Zoom only along the X axis.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.ZoomY">
+            <summary>
+            Zoom only along the Y axis.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.ZoomDialog">
+            <summary>
+            Configure Zoom region from pop up dialog
+            </summary>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState.Pan">
+            <summary>
+            Pan
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.MSChartExtension">
+            <summary>
+            Extension class for MSChart
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.EnableZoomAndPanControls(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Enable Zoom and Pan Controls.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.EnableZoomAndPanControls(System.Windows.Forms.DataVisualization.Charting.Chart,System.Windows.Forms.DataVisualization.Charting.CursorPositionChanged,System.Windows.Forms.DataVisualization.Charting.CursorPositionChanged,System.Windows.Forms.DataVisualization.Charting.ZoomChanged,System.Windows.Forms.DataVisualization.Charting.ChartOption)">
+            <summary>
+            Enable Zoom and Pan Controls.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="selectionChanged">Selection changed callabck. Triggered when user select a point with selec tool.</param>
+            <param name="cursorMoved">Cursor moved callabck. Triggered when user move the mouse in chart area.</param>
+            <param name="zoomChanged">Callback triggered when chart has 
+            zoomed in or out (and on first painting of the chart).</param>
+            <param name="option">Additional user options <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartOption"/></param>
+            <remarks>
+            <para>Callback are optional (pass in null to ignore).</para>
+            <para>WARNING: Add or Remove Chart Area or Chart Series after enabled zoom and pan controls may cause unexpected behavior.</para>
+            <para>Recommended to enable the zoom and pan controls after configure the <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea"/> and <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.DisableZoomAndPanControls(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Disable Zoom and Pan Controls
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.GetChartToolState(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Get current control state.
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.GetChartOption(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Get Chart option settings.
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.Cursor1(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Return Cursor 1 Object
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.Cursor2(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Return Cursor 2 Object
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.CursorsDiff(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Calculate different between Cursor2 and Cursor1 where result = Cursor2 - Cursor1.
+            Return 0 if either cursor is not valid.
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.SetChartControlState(System.Windows.Forms.DataVisualization.Charting.Chart,System.Windows.Forms.DataVisualization.Charting.MSChartExtensionToolState)">
+            <summary>
+            Programmatically Set Chart Tool Control state
+            </summary>
+            <param name="sender">Source Chart</param>
+            <param name="state">Control State</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.SnapToNearestData(System.Windows.Forms.DataVisualization.Charting.Chart,System.Windows.Forms.DataVisualization.Charting.Series,System.Windows.Forms.DataVisualization.Charting.Axis,System.Windows.Forms.DataVisualization.Charting.Axis,System.Windows.Forms.MouseEventArgs,System.Double@,System.Double@)">
+            <summary>
+            Snap Cursor to nearest data point
+            </summary>
+            <param name="chart"></param>
+            <param name="series">Selected Series</param>
+            <param name="xAxis">Selected X-Axis</param>
+            <param name="yAxis">Selected Y-Axis</param>
+            <param name="e">Mouse Down event argument</param>
+            <param name="XResult">Output: X Value</param>
+            <param name="YResult">OUptut: Y Value</param>
+            <returns> Return data index. -1 if not found.</returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.ClearPoints(System.Windows.Forms.DataVisualization.Charting.Series)">
+            <summary>
+            Speed up MSChart data points clear operations.
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.ClearPointsInt(System.Windows.Forms.DataVisualization.Charting.Series,System.Boolean)">
+            <summary>
+            Internal used implementation. <see cref="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.ClearPoints(System.Windows.Forms.DataVisualization.Charting.Series)"/>
+            </summary>
+            <param name="sender"></param>
+            <param name="clearDataBuffer">Delete buffered data for virtual mode</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.Clear(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Clear all series and Annotations
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.Clear(System.Windows.Forms.DataVisualization.Charting.ChartArea)">
+            <summary>
+            Clear all series and Annotations in selected chart area
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.AddXYBuffered(System.Windows.Forms.DataVisualization.Charting.Series,System.Double,System.Double)">
+            <summary>
+            Add data point to data buffer. Used with <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.BufferedMode"/>
+            </summary>
+            <param name="sender"></param>
+            <param name="xValue"></param>
+            <param name="yValue"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.PlotBufferedData(System.Windows.Forms.DataVisualization.Charting.Series)">
+            <summary>
+            Plot chart using data buffer. Only applicable for <see cref="P:System.Windows.Forms.DataVisualization.Charting.ChartOption.BufferedMode"/>
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.RemoveAnnotation(System.Windows.Forms.DataVisualization.Charting.Chart,System.String)">
+            <summary>
+            Remove Chart Annotation by Name
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="annotationName">Annotation Name</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.DrawHorizontalLine(System.Windows.Forms.DataVisualization.Charting.Chart,System.Double,System.Drawing.Color,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.ChartDashStyle,System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisType)">
+            <summary>
+            Draw a horizontal line on chart.
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="y">YAxis value.</param>
+            <param name="lineColor">Line color.</param>
+            <param name="name">Annotation name.</param>
+            <param name="lineWidth">Line width</param>
+            <param name="lineStyle">Line style</param>
+            <param name="chartArea">Target ChartArea where annotation should be displayed. Default to first ChartArea if not defined.</param>
+            <param name="axis">Select Primary or Secondary Axis. Default value is Primary Axis.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.DrawVerticalLine(System.Windows.Forms.DataVisualization.Charting.Chart,System.Double,System.Drawing.Color,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.ChartDashStyle,System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisType)">
+            <summary>
+            Draw a vertical line on chart.
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="x">XAxis value.</param>
+            <param name="lineColor">Line color.</param>
+            <param name="name">Annotation name.</param>
+            <param name="lineWidth">Line width</param>
+            <param name="lineStyle">Line style</param>
+            <param name="chartArea">Target ChartArea where annotation should be displayed. Default to first ChartArea if not defined.</param>
+            <param name="axis">Select Primary or Secondary Axis. Default value is Primary Axis.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.DrawRectangle(System.Windows.Forms.DataVisualization.Charting.Chart,System.Double,System.Double,System.Double,System.Double,System.Drawing.Color,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.ChartDashStyle,System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisType,System.Windows.Forms.DataVisualization.Charting.AxisType)">
+            <summary>
+            Draw a rectangle on chart.
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="x">XAxis value</param>
+            <param name="y">YAxis value</param>
+            <param name="width">rectangle width using XAis value.</param>
+            <param name="height">rectangle height using YAis value.</param>
+            <param name="lineColor">Outline color.</param>
+            <param name="name">Annotation name.</param>
+            <param name="lineWidth">Line width</param>
+            <param name="lineStyle">Line style</param>
+            <param name="chartArea">Target ChartArea where annotation should be displayed. Default to first ChartArea if not defined.</param>
+            <param name="xAxisType">Select Primary or Secondary for X Axis. Default value is Primary Axis.</param>
+            <param name="yAxisType">Select Primary or Secondary for Y Axis. Default value is Primary Axis.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.DrawLine(System.Windows.Forms.DataVisualization.Charting.Chart,System.Double,System.Double,System.Double,System.Double,System.Drawing.Color,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.ChartDashStyle,System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisType,System.Windows.Forms.DataVisualization.Charting.AxisType)">
+            <summary>
+            Draw a line on chart.
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="x0">First point on XAxis.</param>
+            <param name="x1">Second piont on XAxis.</param>
+            <param name="y0">First point on YAxis.</param>
+            <param name="y1">Second point on YAxis.</param>
+            <param name="lineColor">Outline color.</param>
+            <param name="name">Annotation name.</param>
+            <param name="lineWidth">Line width</param>
+            <param name="lineStyle">Line style</param>
+            <param name="chartArea">Target ChartArea where annotation should be displayed. Default to first ChartArea if not defined.</param>
+            <param name="xAxisType">Select Primary or Secondary for X Axis. Default value is Primary Axis.</param>
+            <param name="yAxisType">Select Primary or Secondary for Y Axis. Default value is Primary Axis.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.AddText(System.Windows.Forms.DataVisualization.Charting.Chart,System.String,System.Double,System.Double,System.Drawing.Color,System.String,System.Windows.Forms.DataVisualization.Charting.TextStyle,System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisType,System.Windows.Forms.DataVisualization.Charting.AxisType)">
+            <summary>
+            Add text annotation to chart.
+            </summary>
+            <param name="sender">Source Chart.</param>
+            <param name="text">Text to display.</param>
+            <param name="x">Text box upper left X Coordinate.</param>
+            <param name="y">Text box upper left Y coordinate.</param>
+            <param name="textColor">Text color.</param>
+            <param name="name">Annotation name.</param>
+            <param name="textStyle">Style of text.</param>
+            <param name="chartArea">Target ChartArea where annotation should be displayed. Default to first ChartArea if not defined.</param>
+            <param name="xAxisType">Select Primary or Secondary for X Axis. Default value is Primary Axis.</param>
+            <param name="yAxisType">Select Primary or Secondary for Y Axis. Default value is Primary Axis.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.GetChartAreaBoundary(System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.Axis,System.Windows.Forms.DataVisualization.Charting.Axis)">
+            <summary>
+            Return the entire chart boundary
+            </summary>
+            <param name="sender"></param>
+            <param name="xAxis">X Axis. Use Primary Axis if null</param>
+            <param name="yAxis">Y Axis. Use Primary Axis if null</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.GetChartVisibleAreaBoundary(System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.Axis,System.Windows.Forms.DataVisualization.Charting.Axis)">
+            <summary>
+            Return chart boundary for visible area.
+            </summary>
+            <param name="sender"></param>
+            <param name="xAxis">X Axis. Use Primary Axis if null</param>
+            <param name="yAxis">Y Axis. Use Primary Axis if null</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtension.IsZoomed(System.Windows.Forms.DataVisualization.Charting.ChartArea)">
+            <summary>
+            Check if any of the Chart Axes is zoomed
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="F:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionZoomDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionZoomDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.MSChartExtensionZoomDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.AboutDlgBackground">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.CAELogoSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.FacebookIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.GithubIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.Properties.Resources.MSChartExtensionLogo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.NightVisionTheme">
+            <summary>
+            Night Vision Theme
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.NightVisionTheme.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.ThemeBase">
+            <summary>
+            Theme - Base Class
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ThemeBase.#ctor(System.String)">
+            <summary>
+            Base Constructor, create new theme.
+            </summary>
+            <param name="name">Display name</param>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.Name">
+            <summary>
+            User Friendly Name
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.BackColor">
+            <summary>
+            Chart -> BackColor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.ChartAreaBackColor">
+            <summary>
+            ChartArea -> BackColor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.AxisLineColor">
+            <summary>
+            All Axis: Line Color
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.AxisMajorGridColor">
+            <summary>
+            All Axis: Major Grid Color, Major Tick Mark
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.AxisMinorGridColor">
+            <summary>
+            All Axis: Minor Gird Color, Minor Tick Mark
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.AxisLabelColor">
+            <summary>
+            All Axis: LabelStyel -> ForeColor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.TitleColor">
+            <summary>
+            Chart Title Color
+            </summary>
+        </member>
+        <member name="P:System.Windows.Forms.DataVisualization.Charting.ThemeBase.BorderSkin">
+            <summary>
+            Border Skin Style
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.ThemeBase.AssignTheme(System.Windows.Forms.DataVisualization.Charting.Chart)">
+            <summary>
+            Assign style to chart
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:System.Windows.Forms.DataVisualization.Charting.Theme.WindowsTheme">
+            <summary>
+            Original WinForm Theme
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataVisualization.Charting.Theme.WindowsTheme.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:EventHandlerSupport.Extensions">
+            <summary>
+            This is a set of extensions for accessing the Event Handlers as well as cloning menu items
+            </summary>
+        </member>
+        <member name="F:EventHandlerSupport.Extensions.menuNameCounter">
+            <summary>
+            This contains a counter to help make names unique
+            </summary>
+        </member>
+        <member name="M:EventHandlerSupport.Extensions.Clone(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Clones the specified source tool strip menu item. 
+            </summary>
+            <param name="sourceToolStripMenuItem">The source tool strip menu item.</param>
+            <returns>A cloned version of the toolstrip menu item</returns>
+        </member>
+        <member name="M:EventHandlerSupport.Extensions.AddHandlers``1(``0,``0)">
+            <summary>
+            Adds the handlers from the source component to the destination component
+            </summary>
+            <typeparam name="T">An IComponent type</typeparam>
+            <param name="destinationComponent">The destination component.</param>
+            <param name="sourceComponent">The source component.</param>
+        </member>
+        <member name="M:EventHandlerSupport.Extensions.GetEventHandlerList(System.ComponentModel.IComponent)">
+            <summary>
+            Gets the event handler list from a component
+            </summary>
+            <param name="component">The source component.</param>
+            <returns>The EventHanderList or null if none</returns>
+        </member>
+    </members>
+</doc>
