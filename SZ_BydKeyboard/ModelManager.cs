@@ -105,7 +105,7 @@ namespace SZ_BydKeyboard
             {
                 return;
             }
-            string mid = sn.Substring(sn.Length - 6, sn.Length - 3);
+            string mid = sn.Substring(sn.Length - 6, 4);
             string model = SN2Model(mid);
             if (!lastModel.Equals(model))
             {

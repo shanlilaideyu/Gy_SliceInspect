@@ -618,7 +618,8 @@ namespace SZ_BydKeyboard
         private void btnSN2Model_Click(object sender, EventArgs e)
         {
             string sn = this.tbSN.Text;
-            Console.WriteLine(Common.modelMgr.SN2Model(sn));
+            Common.modelMgr.OnReceiveBarcode(sn);
+            //Console.WriteLine(Common.modelMgr.SN2Model(sn));
         }
 
         private void buttonX5_Click(object sender, EventArgs e)

@@ -105,8 +105,8 @@
             // 
             this.metroShell1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroShell1.CaptionVisible = true;
-            this.metroShell1.Controls.Add(this.metroTabPanel1);
             this.metroShell1.Controls.Add(this.metroTabPanel2);
+            this.metroShell1.Controls.Add(this.metroTabPanel1);
             this.metroShell1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroShell1.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroShell1.ForeColor = System.Drawing.Color.Black;
@@ -191,6 +191,7 @@
             // 
             this.metroTabPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTabPanel1.TabIndex = 1;
+            this.metroTabPanel1.Visible = false;
             // 
             // label12
             // 
@@ -668,7 +669,6 @@
             // 
             this.metroTabPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTabPanel2.TabIndex = 2;
-            this.metroTabPanel2.Visible = false;
             // 
             // tbSN
             // 
@@ -704,17 +704,16 @@
             // 
             // metroTabItem1
             // 
-            this.metroTabItem1.Checked = true;
             this.metroTabItem1.Name = "metroTabItem1";
             this.metroTabItem1.Panel = this.metroTabPanel1;
             this.metroTabItem1.Text = "&主页";
             // 
             // metroTabItem2
             // 
+            this.metroTabItem2.Checked = true;
             this.metroTabItem2.Name = "metroTabItem2";
             this.metroTabItem2.Panel = this.metroTabPanel2;
             this.metroTabItem2.Text = "metroTabItem2";
-            this.metroTabItem2.Visible = false;
             // 
             // qatCustomizeItem1
             // 
