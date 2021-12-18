@@ -97,6 +97,11 @@ namespace alg_KeyBoard_BYD
                         i++;
                     }
                     directoryClass.faiCount = i;
+                    //TODO 不能再初始化时选择第一项
+                    //if(cmbFAI.Items.Count > 0)
+                    //{
+                    //    cmbFAI.SelectedIndex = 0;
+                    //}
                     return true;
                 }
                 else

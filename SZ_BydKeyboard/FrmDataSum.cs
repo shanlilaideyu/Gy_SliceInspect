@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using Newtonsoft.Json;
 using DevComponents.AdvTree;
+using System.IO;
 
 namespace SZ_BydKeyboard
 {
@@ -36,15 +37,35 @@ namespace SZ_BydKeyboard
             Common.ProductSum = 0;
             Common.ProductNg = 0;
 
+            ResetNG();
+
             UpdateSum(Common.ProductSum, Common.ProductNg);
             IniHelper.Write("RuningData", "Sum", Common.ProductSum.ToString(), $"{Application.StartupPath}\\SysCfg\\System.ini");
             IniHelper.Write("RuningData", "Ng", Common.ProductNg.ToString(), $"{Application.StartupPath}\\SysCfg\\System.ini");
         }
 
+        private void ResetNG()
+        {
+            for(int i=0;i<Common.Data.NgCount.Length;i++)
+            {
+                Common.Data.NgCount[i] = 0;
+            }
+            string fp = $"{System.Windows.Forms.Application.StartupPath}\\Config\\{Common.str_ProductName}\\RunningData.json";
+            if (File.Exists(fp))
+            {
+                string content = JsonConvert.SerializeObject(Common.Data,Formatting.Indented);
+                File.WriteAllText(fp, content);
+            }
+        }
+
         delegate void DelegateUpdateSum(int Sum, int NG);
 
+        List<string> fais = new List<string>();
+        List<int> counts = new List<int>();
         public void UpdateSum(int Sum, int NG)
         {
+            fais.Clear();
+            counts.Clear();
             advTree2.Nodes.Clear();
             if (this.InvokeRequired)
             {
@@ -68,6 +89,7 @@ namespace SZ_BydKeyboard
                 int[] SortCount = new int[Common.Data.NgCount.Length];
                 Array.Copy(Common.Data.NgCount, SortCount, SortCount.Length);
                 Array.Sort(SortCount);
+                
                 for (int i = SortCount.Length - 1; i > SortCount.Length - 6; i--)
                 {
                     int fai;
@@ -82,6 +104,8 @@ namespace SZ_BydKeyboard
                     }
                     if (Common.Data.NgCount[fai] != 0)
                     {
+                        fais.Add(Common.FaiNames[fai]);
+                        counts.Add(Common.Data.NgCount[fai]);
                         Node node = new Node(Common.FaiNames[fai]);
                         node.Cells.Add(new Cell(Common.Data.NgCount[fai].ToString()));
                         node.Cells.Add(new Cell($"{(Common.Data.NgCount[fai] * 1.00 / Sum * 100.00).ToString("0.00")}%"));
@@ -89,6 +113,7 @@ namespace SZ_BydKeyboard
                     }
                 }
             }
+            this.chartNG.Series[0].Points.DataBindXY(fais, counts);
         }
 
         private void FrmDataSum_Load(object sender, EventArgs e)

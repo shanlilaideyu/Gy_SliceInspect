@@ -82,6 +82,8 @@ namespace SZ_BydKeyboard
         public static bool RunOnline = true;
        public static bool RunOffline = false;
 
+        public static object snLockObj = new object();
+
         public static ModelManager modelMgr = new ModelManager();
 
         public static string[] StarFais = new string[]

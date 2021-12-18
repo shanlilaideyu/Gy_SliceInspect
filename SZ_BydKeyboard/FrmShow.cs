@@ -176,7 +176,10 @@ namespace SZ_BydKeyboard
             }
             displayBase1.DisplaySourceImage(info.ho_Image);
             List<StructAlgResult> result = new List<StructAlgResult>();
-            Common.InspectCode.DealImage(info.ho_Image, info.index + 1, out result);
+            lock(Common.snLockObj)
+            {
+                Common.InspectCode.DealImage(info.ho_Image, info.index + 1, out result);
+            }
 
             int nResult = JudgeResult(info.ho_Image, Common.FaiNames[info.index], info.nfix, result);
             #region Region显示
@@ -997,31 +1000,34 @@ namespace SZ_BydKeyboard
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Common.str_ProductName = comboBox1.SelectedItem.ToString();
-            if (Common.str_ProductName == "Star")
+            lock(Common.snLockObj)
             {
-                Common.FaiNames = Common.StarFais;
-            }
-            else if (Common.str_ProductName == "Starfire")
-            {
-                Common.FaiNames = Common.StarFireFais;
-            }
-            else if (Common.str_ProductName == "Flash")
-            {
-                Common.FaiNames = Common.FlashFais;
-            }
-            HOperatorSet.SetSystem("clip_region", "false");
+                Common.str_ProductName = comboBox1.SelectedItem.ToString();
+                if (Common.str_ProductName == "Star")
+                {
+                    Common.FaiNames = Common.StarFais;
+                }
+                else if (Common.str_ProductName == "Starfire")
+                {
+                    Common.FaiNames = Common.StarFireFais;
+                }
+                else if (Common.str_ProductName == "Flash")
+                {
+                    Common.FaiNames = Common.FlashFais;
+                }
+                HOperatorSet.SetSystem("clip_region", "false");
 
 
-            Common.ShowProductType(Common.str_ProductName);
-            Thread.Sleep(500);
-            Common.frmMain.LoadParam();
-            Common.frmInspect.LoadInspectCode();
-            //加载校准值
-            Common.frmMain.LoadMultAndAdd();
-            InitShowNodes();
-            Common.frmSetting.LoadBoardAndPostionSetting(Common.str_ProductName);
-            Common.frmSetting.InitCheck();
+                Common.ShowProductType(Common.str_ProductName);
+                Thread.Sleep(500);
+                Common.frmMain.LoadParam();
+                Common.frmInspect.LoadInspectCode();
+                //加载校准值
+                Common.frmMain.LoadMultAndAdd();
+                InitShowNodes();
+                Common.frmSetting.LoadBoardAndPostionSetting(Common.str_ProductName);
+                Common.frmSetting.InitCheck();
+            }
         }
     }
 }

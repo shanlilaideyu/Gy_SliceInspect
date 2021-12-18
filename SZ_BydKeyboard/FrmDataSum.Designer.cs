@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -39,7 +42,9 @@
             this.columnHeader3 = new DevComponents.AdvTree.ColumnHeader();
             this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.chartNG = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.advTree2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNG)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX2
@@ -97,7 +102,7 @@
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX1.Font = new System.Drawing.Font("楷体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonX1.Location = new System.Drawing.Point(257, 351);
+            this.buttonX1.Location = new System.Drawing.Point(257, 450);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor();
             this.buttonX1.Size = new System.Drawing.Size(100, 34);
@@ -146,10 +151,11 @@
             this.advTree2.NodesConnector = this.nodeConnector2;
             this.advTree2.NodeStyle = this.elementStyle2;
             this.advTree2.PathSeparator = ";";
-            this.advTree2.Size = new System.Drawing.Size(348, 165);
+            this.advTree2.Size = new System.Drawing.Size(291, 12);
             this.advTree2.Styles.Add(this.elementStyle2);
             this.advTree2.TabIndex = 7;
             this.advTree2.Text = "advTree2";
+            this.advTree2.Visible = false;
             // 
             // columnHeader1
             // 
@@ -181,13 +187,31 @@
             this.elementStyle2.Name = "elementStyle2";
             this.elementStyle2.TextColor = System.Drawing.SystemColors.ControlText;
             // 
+            // chartNG
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartNG.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartNG.Legends.Add(legend1);
+            this.chartNG.Location = new System.Drawing.Point(12, 181);
+            this.chartNG.Name = "chartNG";
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartNG.Series.Add(series1);
+            this.chartNG.Size = new System.Drawing.Size(341, 263);
+            this.chartNG.TabIndex = 8;
+            this.chartNG.Text = "chart1";
+            // 
             // FrmDataSum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(369, 399);
+            this.ClientSize = new System.Drawing.Size(369, 496);
             this.CloseButtonVisible = false;
+            this.Controls.Add(this.chartNG);
             this.Controls.Add(this.advTree2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.buttonX1);
@@ -199,6 +223,7 @@
             this.Text = "生产统计";
             this.Load += new System.EventHandler(this.FrmDataSum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.advTree2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +240,6 @@
         private DevComponents.AdvTree.ColumnHeader columnHeader3;
         private DevComponents.AdvTree.NodeConnector nodeConnector2;
         private DevComponents.DotNetBar.ElementStyle elementStyle2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartNG;
     }
 }
