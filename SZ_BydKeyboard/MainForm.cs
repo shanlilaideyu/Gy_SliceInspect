@@ -20,6 +20,7 @@ using System.Runtime.InteropServices;
 using LeoMotion;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Ports;
+using log4net;
 
 namespace SZ_BydKeyboard
 {
@@ -176,6 +177,7 @@ namespace SZ_BydKeyboard
                 if (str.Length > 1)
                 {
                     Common.str_DataCode2 = str;
+                    LogManager.GetLogger(typeof(MainForm)).Debug($"=======DataReadPort2_DataReceived {str}========");
                     Common.modelMgr.OnReceiveBarcode(str);
                     Common.ShowMsgEvent($"Tips:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}--工位2二维码为:[{ Common.str_DataCode2}]--");
                 }
@@ -190,6 +192,7 @@ namespace SZ_BydKeyboard
                 if (str.Length > 1)
                 {
                     Common.str_DataCode1 = str;
+                    LogManager.GetLogger(typeof(MainForm)).Debug($"=======DataReadPort1_DataReceived {str}========");
                     Common.modelMgr.OnReceiveBarcode(str);
                     Common.ShowMsgEvent($"Tips:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}--工位1二维码为:[{ Common.str_DataCode1}]--");
                 }
@@ -299,6 +302,7 @@ namespace SZ_BydKeyboard
             Common.bSafeLightUse = bool.Parse(IniHelper.Read("SafeLight", "Use", "False", $"{Application.StartupPath}\\SysCfg\\System.ini"));
             Common.bOfflineMesUse= bool.Parse(IniHelper.Read("OfflineMES", "Use", "False", $"{Application.StartupPath}\\SysCfg\\System.ini"));
 
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======MainForm_Load========");
             if (Common.str_ProductName == "Star")
             {
                 Common.FaiNames = Common.StarFais;
@@ -311,6 +315,7 @@ namespace SZ_BydKeyboard
             {
                 Common.FaiNames = Common.FlashFais;
             }
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======HOperatorSet.SetSystem========");
             HOperatorSet.SetSystem("clip_region", "false");
             BackWorker.WorkerSupportsCancellation = true;
             BackWorker.WorkerReportsProgress = true;
@@ -318,17 +323,23 @@ namespace SZ_BydKeyboard
             InitMainformLayout();
             Common.frmMain = this;
 
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======LoadConfig========");
             Common.modelMgr.LoadConfig();
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======ShowProductType========");
             Common.ShowProductType(Common.str_ProductName);
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======Common.modelMgr.SetLastModel========");
             Common.modelMgr.SetLastModel(Common.str_ProductName);
             Thread.Sleep(500);
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======InitCamera========");
             InitCamera();
             LoadParam();
             InitPort();
             Common.ProC.LoadParam();
             Common.ProC = ProControl.GetInstance();
             Common.ProC.InitParam();
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======LoadMotionData========");
             Common.frmMotionSetting.LoadMotionData();
+            LogManager.GetLogger(typeof(MainForm)).Debug("=======LoadInspectCode========");
             Common.frmInspect.LoadInspectCode();
             //加载校准值
             LoadMultAndAdd();
@@ -446,6 +457,7 @@ namespace SZ_BydKeyboard
                 if(Common.ProC.ExCard.InputList[ProControl.ExInput.治具1对射感应.GetHashCode()] || 
                     Common.ProC.ExCard.InputList[ProControl.ExInput.治具2对射感应.GetHashCode()])
                 {
+                    LogManager.GetLogger(typeof(MainForm)).Debug($"=======治具对射感应,机台报警========");
                     Common.ProC.ExCard.WriteOutput((ushort)ProControl.ExOutput.机台报警.GetHashCode(), 0);
                     BTN_Pause_Click(this,null);
                 }

@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
-            this.metroTabPanel2 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.tbSN = new System.Windows.Forms.TextBox();
-            this.btnSN2Model = new System.Windows.Forms.Button();
             this.metroTabPanel1 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonX7 = new DevComponents.DotNetBar.ButtonX();
@@ -64,6 +61,9 @@
             this.BTN_AutoRun = new DevComponents.DotNetBar.ButtonX();
             this.BTN_Pause = new DevComponents.DotNetBar.ButtonX();
             this.label13 = new System.Windows.Forms.Label();
+            this.metroTabPanel2 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.tbSN = new System.Windows.Forms.TextBox();
+            this.btnSN2Model = new System.Windows.Forms.Button();
             this.metroAppButton1 = new DevComponents.DotNetBar.Metro.MetroAppButton();
             this.metroTabItem1 = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.metroTabItem2 = new DevComponents.DotNetBar.Metro.MetroTabItem();
@@ -92,8 +92,8 @@
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.MainPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.metroShell1.SuspendLayout();
-            this.metroTabPanel2.SuspendLayout();
             this.metroTabPanel1.SuspendLayout();
+            this.metroTabPanel2.SuspendLayout();
             this.metroStatusBar1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,52 +139,6 @@
             this.metroShell1.SystemText.QatRemoveItemText = "&Remove from Quick Access Toolbar";
             this.metroShell1.TabIndex = 0;
             this.metroShell1.TabStripFont = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroTabPanel2
-            // 
-            this.metroTabPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel2.Controls.Add(this.tbSN);
-            this.metroTabPanel2.Controls.Add(this.btnSN2Model);
-            this.metroTabPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel2.Location = new System.Drawing.Point(0, 52);
-            this.metroTabPanel2.Name = "metroTabPanel2";
-            this.metroTabPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel2.Size = new System.Drawing.Size(1458, 69);
-            // 
-            // 
-            // 
-            this.metroTabPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel2.TabIndex = 2;
-            this.metroTabPanel2.Visible = false;
-            // 
-            // tbSN
-            // 
-            this.tbSN.BackColor = System.Drawing.Color.White;
-            this.tbSN.ForeColor = System.Drawing.Color.Black;
-            this.tbSN.Location = new System.Drawing.Point(254, 23);
-            this.tbSN.Name = "tbSN";
-            this.tbSN.Size = new System.Drawing.Size(100, 22);
-            this.tbSN.TabIndex = 1;
-            // 
-            // btnSN2Model
-            // 
-            this.btnSN2Model.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSN2Model.ForeColor = System.Drawing.Color.Black;
-            this.btnSN2Model.Location = new System.Drawing.Point(401, 23);
-            this.btnSN2Model.Name = "btnSN2Model";
-            this.btnSN2Model.Size = new System.Drawing.Size(75, 23);
-            this.btnSN2Model.TabIndex = 0;
-            this.btnSN2Model.Text = "SN2Model";
-            this.btnSN2Model.UseVisualStyleBackColor = false;
-            this.btnSN2Model.Click += new System.EventHandler(this.btnSN2Model_Click);
             // 
             // metroTabPanel1
             // 
@@ -691,6 +645,52 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "暂停";
             // 
+            // metroTabPanel2
+            // 
+            this.metroTabPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel2.Controls.Add(this.tbSN);
+            this.metroTabPanel2.Controls.Add(this.btnSN2Model);
+            this.metroTabPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel2.Location = new System.Drawing.Point(0, 52);
+            this.metroTabPanel2.Name = "metroTabPanel2";
+            this.metroTabPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel2.Size = new System.Drawing.Size(1458, 69);
+            // 
+            // 
+            // 
+            this.metroTabPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel2.TabIndex = 2;
+            this.metroTabPanel2.Visible = false;
+            // 
+            // tbSN
+            // 
+            this.tbSN.BackColor = System.Drawing.Color.White;
+            this.tbSN.ForeColor = System.Drawing.Color.Black;
+            this.tbSN.Location = new System.Drawing.Point(254, 23);
+            this.tbSN.Name = "tbSN";
+            this.tbSN.Size = new System.Drawing.Size(100, 22);
+            this.tbSN.TabIndex = 1;
+            // 
+            // btnSN2Model
+            // 
+            this.btnSN2Model.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSN2Model.ForeColor = System.Drawing.Color.Black;
+            this.btnSN2Model.Location = new System.Drawing.Point(401, 23);
+            this.btnSN2Model.Name = "btnSN2Model";
+            this.btnSN2Model.Size = new System.Drawing.Size(75, 23);
+            this.btnSN2Model.TabIndex = 0;
+            this.btnSN2Model.Text = "SN2Model";
+            this.btnSN2Model.UseVisualStyleBackColor = false;
+            this.btnSN2Model.Click += new System.EventHandler(this.btnSN2Model_Click);
+            // 
             // metroAppButton1
             // 
             this.metroAppButton1.AutoExpandOnClick = true;
@@ -1033,10 +1033,10 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.metroShell1.ResumeLayout(false);
             this.metroShell1.PerformLayout();
-            this.metroTabPanel2.ResumeLayout(false);
-            this.metroTabPanel2.PerformLayout();
             this.metroTabPanel1.ResumeLayout(false);
             this.metroTabPanel1.PerformLayout();
+            this.metroTabPanel2.ResumeLayout(false);
+            this.metroTabPanel2.PerformLayout();
             this.metroStatusBar1.ResumeLayout(false);
             this.ResumeLayout(false);
 

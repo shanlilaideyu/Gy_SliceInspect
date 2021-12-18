@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,8 @@ namespace SZ_BydKeyboard
         [STAThread]
         static void Main()
         {
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler((obj, args) => MiniDump.TryDump("error.dmp"));
+            log4net.Config.XmlConfigurator.Configure(new FileInfo("log4net.config"));
             Application.EnableVisualStyles();
             bool createNew;
             using (System.Threading.Mutex m = new System.Threading.Mutex(true, Application.ProductName, out createNew))
