@@ -1019,6 +1019,7 @@ namespace SZ_BydKeyboard
 
 
                 Common.ShowProductType(Common.str_ProductName);
+                Common.modelMgr.SetLastModel(Common.str_ProductName);
                 Thread.Sleep(500);
                 Common.frmMain.LoadParam();
                 Common.frmInspect.LoadInspectCode();

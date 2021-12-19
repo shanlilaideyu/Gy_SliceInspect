@@ -113,7 +113,25 @@ namespace SZ_BydKeyboard
                     }
                 }
             }
+            if (fais.Count <= 0)
+            {
+                foreach(string faiName in Common.FaiNames)
+                {
+                    fais.Add(faiName);
+                    counts.Add(0);
+                }
+            }
             this.chartNG.Series[0].Points.DataBindXY(fais, counts);
+            //if(counts[0] == 0)
+            //{
+            //    foreach(var dp in this.chartNG.Series[0].Points)
+            //    {
+            //        if(dp.YValues[0] == 0)
+            //        {
+            //            dp.IsValueShownAsLabel = true;
+            //        }
+            //    }
+            //}
         }
 
         private void FrmDataSum_Load(object sender, EventArgs e)
